@@ -5,21 +5,19 @@ Returns: an integer
 
 
 def single_number(arr):
-    # array has values
     result = []
-    #
-    # # loop through each index item and check list for dup
+    # loop through each index item and check list for dup
     for i in arr:
-        #     # if it doesn't have a pair
-        #     # append to new list
+        # if it doesn't have a pair
+        # append to new list
         if i not in result:
             result.append(i)
 
-        #     # if it has a pair remove
+        # if it has a pair remove
         else:
             result.remove(i)
 
-    # # return integer
+    # return integer
     return result[0]
 
 
