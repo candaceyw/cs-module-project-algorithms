@@ -4,8 +4,26 @@ Returns: a List of integers
 '''
 def sliding_window_max(nums, k):
     # Your code here
+    output = []
+    dq = []
 
-    pass
+    # length of dq <= k
+    # values store are indexes
+    # max contained dq[0]
+    for i, num in enumerate(nums):
+        if dq and dq[0] < i - k + 1:
+            dq.pop(0)
+
+        # while dq exists
+        while dq and nums[dq[-1]] < num:
+            dq.pop()
+
+        dq.append(i)
+
+        if i >= k -1:
+            output.append(nums[dq[0]])
+
+    return output
 
 
 if __name__ == '__main__':
