@@ -47,8 +47,7 @@ def sliding_windo_max_queue(nums, k):
         # the elements at the front of the queue
         # is the largest number of the current window
         # so save that number into our output
-
-
+    pass
 
 if __name__ == '__main__':
     # Use the main function here to test out your implementation 
